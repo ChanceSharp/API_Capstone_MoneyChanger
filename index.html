@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<title>Currency Converter</title>
+</head>
+
+
+
+<body>
+    <div class="form-background">
+    <div class="form-container">
+    <div class="title-header">
+        <h1 class="app-name">CURRENCY CONVERTER</h1>
+    </div>
+    <section>
+    <div class="input-data" data-page="inputs">
+        <form class="form" id="user-data">
+            <div class="user-selection">
+                <label for="starting-currency">From Currency:</label>
+                     <select type="dropdown" id="starting-currency" placeholder="USD" required>
+                        <option value="EUR">EUR</option>
+                        <option value="USD">USD</option>
+                        <option value="JPY">JPY</option>
+                        <option value="LTL">LTL</option>
+                        <option value="CZK">CZK</option>
+                        <option value="GBP">GBP</option>
+                        <option value="FRF">FRF</option>
+                        <option value="SGD">SGD</option>
+                    </select>
+            </div>
+            <div class="user-selection">
+                <label for="amount">Amount:</label>
+                <input type="text" id="input-amount" placeholder="enter an amount to convert" required>
+            </div>
+            <fieldset class="form-box">
+                <legend>To Currency:</legend>
+                <input id="currency-1" name="symbols" type="checkbox" value="USD">
+                <label for="currency-1">USD</label>
+                <input id="currency-2" name="symbols" type="checkbox" value="EUR">
+                <label for="currency-2">EUR</label>
+                <input id="currency-3" name="symbols" type="checkbox" value="JPY">
+                <label for="currency-3">JPY</label>
+                <input id="currency-4" name="symbols" type="checkbox" value="LTL">
+                <label for="currency-4">LTL</label>
+                <input id="currency-4" name="symbols" type="checkbox" value="GBP">
+                <label for="currency-4">GBP</label>
+                <input id="currency-4" name="symbols" type="checkbox" value="CAD">
+                <label for="currency-4">CAD</label>
+                <input id="currency-4" name="symbols" type="checkbox" value="KRW">
+                <label for="currency-4">KRW</label>
+                <input id="currency-4" name="symbols" type="checkbox" value="CNY">
+                <label for="currency-4">CNY</label>
+                
+            </fieldset>
+        <div class="both-buttons">    
+            <div class="button">
+                <button type="submit" class="convert-button">Convert</button>
+            </div>
+            <div class="button">
+                <button type="submit" class="find-banks">Find Nearby Banks</button>
+            </div>
+            <div class="disclaimer">
+                <p class="api-disclaimer">Note: This app uses an older API version that does not use the latest security certifications.</br>
+                        Please enable loading unsafe scripts from your browser to run the currency converter.
+                </p>
+            </div>
+        </div>     
+        </form>
+    </div>
+
+    </section>
+
+
+<div class = "card">
+    <div class="display-results"></div>
+</div>
+
+    <!--<input id="bank-input" class="controls" type="text" placeholder="Banks">-->
+    <div id="map"></div>
+</div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <!-- old key 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXRtf6q2WffwnOvuRyV44fvEheB-enUms&callback=initMap&libraries=places"></script>
+ -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXRtf6q2WffwnOvuRyV44fvEheB-enUms&callback=initMap&libraries=places"></script>
+
+    
+</script>
+</body>
+</html>
