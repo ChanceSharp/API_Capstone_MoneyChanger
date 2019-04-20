@@ -91,7 +91,7 @@ function buildSymbolString(symbols) {
 function searchBanks() {
     $(".find-banks").on("submit", function (event) {
         initMap();
-        var placesService = google.maps.places.PlacesService(map);
+        let placesService = google.maps.places.PlacesService(map);
     })
 
 }
@@ -101,10 +101,10 @@ function searchBanks() {
 handleAmountChange();
 handleFormSubmit();
 
-var map;
-var infoWindow;
-var uluru;
-var service;
+let map;
+let infoWindow;
+let uluru;
+let service;
 
 function initMap() {
     //uluru = {lat: 34.0522, lng: -118.2437};
@@ -117,13 +117,13 @@ function initMap() {
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
-            var pos = {
+            let pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
             //uluru = {lat: pos.lat, lng: pos.lng};
 
-            var marker = new google.maps.Marker({
+            let marker = new google.maps.Marker({
                 position: pos,
                 map: map
             });
@@ -155,8 +155,8 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 
     // Create the Search box and link it to the UI element    
-    var input = document.getElementById("bank-input");
-    var searchBox = new google.maps.places.SearchBox(input);
+    let input = document.getElementById("bank-input");
+    let searchBox = new google.maps.places.SearchBox(input);
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
     // Bias the SearchBox results towards current map's viewport
@@ -164,12 +164,12 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         searchBox.setBounds(map.getBounds());
     });
 
-    var markers = [];
+    let markers = [];
 
     //Listen for the event fired when the user selects a prediction and retrieve more details for that place
 
     searchBox.addListener("places_changed", function () {
-        var places = searchBox.getPlaces();
+        let places = searchBox.getPlaces();
 
         if (places.length == 0) {
             return;
@@ -182,13 +182,13 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         markers = [];
 
         //For each place, get the icon, name and location
-        var bounds = new google.maps.LatLngBounds();
+        let bounds = new google.maps.LatLngBounds();
         places.forEach(function (place) {
             if (!place.geometry) {
                 console.log("Returned place contains no geometry");
                 return;
             }
-            var icon = {
+            let icon = {
                 url: place.icon,
                 size: new google.maps.Size(71, 71),
                 origin: new google.maps.Point(0, 0),
@@ -219,15 +219,15 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
+        for (let i = 0; i < results.length; i++) {
             createMarker(results[i]);
         }
     }
 }
 
 function createMarker(place) {
-    var placeLoc = place.geometry.location;
-    var marker = new google.maps.Marker({
+    let placeLoc = place.geometry.location;
+    let marker = new google.maps.Marker({
         map: map,
         position: place.geometry.location
     });
