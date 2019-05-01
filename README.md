@@ -2,4 +2,6 @@
 
 Capstone API App - An app that calls to Goole Maps and Fixer.io API.
 
-![alt text] (https://github.com/ChanceSharp/API_Capstone_MoneyChanger/blob/master/MoneyChanger.png)
+<img src="https://github.com/ChanceSharp/API_Capstone_MoneyChanger/blob/master/Money_Changer.png"
+
+![] (https://github.com/ChanceSharp/API_Capstone_MoneyChanger/blob/master/Money_Changer.png)
