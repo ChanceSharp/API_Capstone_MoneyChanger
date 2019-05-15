@@ -3,6 +3,9 @@ const STORE = {
     multiplier: null
 };
 
+let fixer = require("fixer-api");
+fixer.baseUrl = "http://data.fixer.io/api/"
+
 // old api url 
 //const currencyURL = "http://data.fixer.io/api/latest";
 const currencyURL= "http://data.fixer.io/api/latest?access_key=c956bfe9d5f0a649f0afa1feb4287288";
