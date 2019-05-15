@@ -4,10 +4,10 @@ const STORE = {
 };
 
 // old api url 
-//const currencyURL = "https://data.fixer.io/api/latest";
-const currencyURL= "https://data.fixer.io/api/latest?access_key=c956bfe9d5f0a649f0afa1feb4287288";
+//const currencyURL = "http://data.fixer.io/api/latest";
+const currencyURL= "http://data.fixer.io/api/latest?access_key=c956bfe9d5f0a649f0afa1feb4287288";
 //google maps api key AIzaSyCikYUxmjYBHfC73yZgYi8HueHD8YmjqJ0
-//https://api.fixer.io/latest?base= <---input baseCurrency
+//http://api.fixer.io/latest?base= <---input baseCurrency
 
 function getCurrencyData(baseCurrency, targetCurrencies, callback) {
     const params = {
