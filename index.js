@@ -4,7 +4,7 @@ const STORE = {
 };
 
 let fixer = require("fixer-api");
-fixer.baseUrl = "http://data.fixer.io/api/"
+fixer.baseUrl = "http://data.fixer.io/api/latest"
 
 // old api url 
 //const currencyURL = "http://data.fixer.io/api/latest";
