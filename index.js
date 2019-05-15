@@ -10,7 +10,6 @@ fixer.set({
   baseUrl: 'http://data.fixer.io/api/latest'
 });
 
-const data = await fixer.latest();
 
 // old api url 
 //const currencyURL = "http://data.fixer.io/api/latest";
