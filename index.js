@@ -24,9 +24,9 @@ function generateCurrencyCard(data, symbol) {
 }
 
 function showCurrencyData(data) { // want to display results to DOM
-    var output = "";
+    let output = "";
     //console.log(data.rates);
-    for (var symbol in data.rates) {
+    for (let symbol in data.rates) {
         output += generateCurrencyCard(data, symbol);
     }
     $(".display-results").html(output);
@@ -37,7 +37,7 @@ function storeCurrencyData(data) {
 }
 
 function convertCurrencyAmount(data, multiplier) { //multiply each number in rates and store it in data in place of starting rate
-    for (var symbol in data.rates) {
+    for (let symbol in data.rates) {
         data.rates[symbol] = data.rates[symbol] * multiplier;
         //console.log(symbol);
     }
@@ -90,7 +90,7 @@ function buildSymbolString(symbols) {
 function searchBanks() {
     $(".find-banks").on("submit", function (event) {
         initMap();
-        let placesService = google.maps.places.PlacesService(map);
+        var placesService = google.maps.places.PlacesService(map);
     })
 
 }
