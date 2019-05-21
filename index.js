@@ -11,7 +11,6 @@ const currencyURL= "https://api.exchangeratesapi.io/latest";
 
 function getCurrencyData(baseCurrency, targetCurrencies, callback) {
     const params = {
-        access_key: "c956bfe9d5f0a649f0afa1feb4287288",
         base: baseCurrency,
         symbols: targetCurrencies //"GBP,AUD,CNY,CAD,CZK"
     }
