@@ -24,9 +24,9 @@ function generateCurrencyCard(data, symbol) {
 }
 
 function showCurrencyData(data) { // want to display results to DOM
-    let output = "";
+    var output = "";
     //console.log(data.rates);
-    for (let symbol in data.rates) {
+    for (var symbol in data.rates) {
         output += generateCurrencyCard(data, symbol);
     }
     $(".display-results").html(output);
@@ -37,7 +37,7 @@ function storeCurrencyData(data) {
 }
 
 function convertCurrencyAmount(data, multiplier) { //multiply each number in rates and store it in data in place of starting rate
-    for (let symbol in data.rates) {
+    for (var symbol in data.rates) {
         data.rates[symbol] = data.rates[symbol] * multiplier;
         //console.log(symbol);
     }
@@ -100,10 +100,10 @@ function searchBanks() {
 handleAmountChange();
 handleFormSubmit();
 
-let map;
-let infoWindow;
-let uluru;
-let service;
+var map;
+var infoWindow;
+var uluru;
+var service;
 
 function initMap() {
     //uluru = {lat: 34.0522, lng: -118.2437};
@@ -122,7 +122,7 @@ function initMap() {
             };
             //uluru = {lat: pos.lat, lng: pos.lng};
 
-            let marker = new google.maps.Marker({
+            var marker = new google.maps.Marker({
                 position: pos,
                 map: map
             });
@@ -154,8 +154,8 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 
     // Create the Search box and link it to the UI element    
-    let input = document.getElementById("bank-input");
-    let searchBox = new google.maps.places.SearchBox(input);
+    var input = document.getElementById("bank-input");
+    var searchBox = new google.maps.places.SearchBox(input);
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
     // Bias the SearchBox results towards current map's viewport
@@ -163,12 +163,12 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         searchBox.setBounds(map.getBounds());
     });
 
-    let markers = [];
+    var markers = [];
 
     //Listen for the event fired when the user selects a prediction and retrieve more details for that place
 
     searchBox.addListener("places_changed", function () {
-        let places = searchBox.getPlaces();
+        var places = searchBox.getPlaces();
 
         if (places.length == 0) {
             return;
@@ -181,13 +181,13 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         markers = [];
 
         //For each place, get the icon, name and location
-        let bounds = new google.maps.LatLngBounds();
+        var bounds = new google.maps.LatLngBounds();
         places.forEach(function (place) {
             if (!place.geometry) {
                 console.log("Returned place contains no geometry");
                 return;
             }
-            let icon = {
+            var icon = {
                 url: place.icon,
                 size: new google.maps.Size(71, 71),
                 origin: new google.maps.Point(0, 0),
@@ -218,15 +218,15 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-        for (let i = 0; i < results.length; i++) {
+        for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
         }
     }
 }
 
 function createMarker(place) {
-    let placeLoc = place.geometry.location;
-    let marker = new google.maps.Marker({
+    var placeLoc = place.geometry.location;
+    var marker = new google.maps.Marker({
         map: map,
         position: place.geometry.location
     });
