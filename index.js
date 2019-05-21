@@ -3,17 +3,9 @@ const STORE = {
     multiplier: null
 };
 
-const fixer = require('fixer-api');
-
-fixer.set({
-  accessKey: 'c956bfe9d5f0a649f0afa1feb4287288',
-  baseUrl: 'http://data.fixer.io/api/latest'
-});
-
-
 // old api url 
 //const currencyURL = "http://data.fixer.io/api/latest";
-const currencyURL= "http://data.fixer.io/api/latest?access_key=c956bfe9d5f0a649f0afa1feb4287288";
+const currencyURL= "https://api.exchangeratesapi.io/latest";
 //google maps api key AIzaSyCikYUxmjYBHfC73yZgYi8HueHD8YmjqJ0
 //http://api.fixer.io/latest?base= <---input baseCurrency
 
