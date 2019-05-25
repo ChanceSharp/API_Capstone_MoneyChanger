@@ -6,7 +6,7 @@ const STORE = {
 // old api url 
 //const currencyURL = "http://data.fixer.io/api/latest";
 const currencyURL= "https://api.exchangeratesapi.io/latest";
-//google maps api key AIzaSyCikYUxmjYBHfC73yZgYi8HueHD8YmjqJ0
+//google maps api key AIzaSyA64TRpiv1y37DTQWtiZ2yaxquhfqYZOaE
 //http://api.fixer.io/latest?base= <---input baseCurrency
 
 function getCurrencyData(baseCurrency, targetCurrencies, callback) {
