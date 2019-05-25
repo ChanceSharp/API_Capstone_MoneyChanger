@@ -90,7 +90,7 @@ function buildSymbolString(symbols) {
 function searchBanks() {
     $(".find-banks").on("submit", function (event) {
         initMap();
-        var PlacesService = google.maps.places.PlacesService(map);
+        var placesService = google.maps.places.PlacesService(map);
     })
 
 }
