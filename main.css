@@ -89,12 +89,12 @@ body {
 
 .display-results {
 
-    margin: 0 auto 0 auto;
+    margin: 3 auto 3 auto;
     text-align: center;
     font-size: 20px;
     font-family: 'Chivo', sans-serif;
     padding: 3px;
-    line-height: 14px;
+   
 }
 
 .form-container {
